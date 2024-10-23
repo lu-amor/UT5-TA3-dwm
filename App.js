@@ -27,7 +27,6 @@ export default function App() {
       <View style={styles.tasksWrapper}> 
         <Text style={styles.sectionTitle}>Today's Tasks</Text>
 
-        {/* FlatList para hacer la lista scrolleable */}
         <FlatList
           data={taskItems}
           renderItem={({ item, index }) => (
@@ -39,7 +38,7 @@ export default function App() {
           )}
           keyExtractor={(item, index) => index.toString()}
           style={styles.items}
-          contentContainerStyle={{ paddingBottom: 100 }} // Añadimos padding al final para evitar solapamiento con el input
+          contentContainerStyle={{ paddingBottom: 100 }}
         />
       </View>
       
